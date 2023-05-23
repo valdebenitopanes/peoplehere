@@ -13,8 +13,7 @@ import { LoadingController, AlertController } from '@ionic/angular'
 export class LoginPage {
   credentials = this.fb.nonNullable.group({
     email: ['', Validators.required],
-    password: ['', Validators.required],
-    name: ['', Validators.required]
+    password: ['', Validators.required]
   })
 
   constructor(
@@ -41,6 +40,7 @@ export class LoginPage {
   }
 
   async login() {
+    console.log("aqui 1 - login()")
     const loading = await this.loadingController.create()
     await loading.present()
 
